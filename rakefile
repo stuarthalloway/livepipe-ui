@@ -11,7 +11,12 @@ namespace :test do
       end
       raise "JSSpec test failures" unless all_fine
     end
+  end 
+  
+  task :jslint do
+    system("java -jar ~/devtools/java/rhino/js.jar jsspec/jslint.js src/cookie.js")    
   end
+  
 end
 
 task :default => "test:jsspec"

@@ -7,10 +7,12 @@
  * @attribution http://www.quirksmode.org/js/cookies.html
  */
 
-if(typeof(Prototype) == "undefined")
-  throw "Cookie requires Prototype to be loaded."
-if(typeof(Object.Event) == "undefined")
+if (typeof Prototype == "undefined") {
+  throw "Cookie requires Prototype to be loaded.";
+}
+if (typeof Object.Event == "undefined") {
   throw "Cookie requires Object.Event to be loaded.";
+}
 
 var Cookie = {
   build: function() {
